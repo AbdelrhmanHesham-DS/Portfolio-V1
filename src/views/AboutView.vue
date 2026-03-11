@@ -1,4 +1,5 @@
 <template>
+
   <!-- ABOUT -->
   <div class="bg-[#0b0f1a] px-5 py-10 md:px-12 md:py-16 text-left text-gray-200 mx-3 mb-5 rounded-3xl border border-[#1e293b]">
     
@@ -139,32 +140,36 @@
       </div>
     </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
       <div
         v-for="cert in certificates"
         :key="cert.id"
-        class="bg-[#111827] border border-[#1e293b] p-4 rounded-2xl hover:border-[#38bdf8] transition"
+        class="bg-[#111827] border border-[#1e293b] p-6 rounded-2xl hover:border-[#38bdf8] transition"
       >
 
-        <img
-          :src="cert.image"
-          class="w-full h-40 object-cover rounded-lg mb-4"
-        />
-
-        <h3 class="text-lg font-bold text-white">
+        <h3 class="text-lg font-bold text-white mb-2">
           {{ cert.title }}
         </h3>
 
-        <p class="text-slate-400 text-sm">
+        <p class="text-slate-400 text-sm mb-4">
           {{ cert.issuer }} ({{ cert.date }})
         </p>
+
+        <a
+          :href="cert.pdf"
+          download
+          class="inline-block border border-[#38bdf8] text-[#38bdf8] px-4 py-2 rounded-lg font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+        >
+          Download Certificate
+        </a>
 
       </div>
 
     </div>
 
   </div>
+
 </template>
 
 <script>
@@ -205,28 +210,28 @@ export default {
           title: "Getting Started with Deep Learning",
           issuer: "NVIDIA",
           date: "August 2025",
-          image: "/img/certificates/nvidia.png"
+          pdf: "/certificates/nvidia.pdf"
         },
         {
           id: 2,
           title: "Programming using Python (120 Hours)",
           issuer: "NTI & ITIDA",
           date: "July 2025",
-          image: "/img/certificates/nti.png"
+          pdf: "/certificates/nti.pdf"
         },
         {
           id: 3,
-          title: "CIB Summer Program - 'The Green Leap'",
+          title: "CIB Summer Program - The Green Leap",
           issuer: "CIB & IFC",
           date: "July 2025",
-          image: "/img/certificates/cib.png"
+          pdf: "/certificates/cib.pdf"
         },
         {
           id: 4,
           title: "Back-End Diploma (120 Hours)",
           issuer: "ARRAY Courses Center",
           date: "January 2025",
-          image: "/img/certificates/array.png"
+          pdf: "/certificates/array.pdf"
         }
       ]
 
