@@ -109,6 +109,7 @@
             <li><router-link to="/" class="hover:text-white">Home</router-link></li>
             <li><router-link to="/about" class="hover:text-white">About</router-link></li>
             <li><router-link to="/projects" class="hover:text-white">Projects</router-link></li>
+            <li><router-link to="/contact"  class="hover:text-white">Contact</router-link></li>
           </ul>
         </div>
 
