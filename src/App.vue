@@ -1,6 +1,5 @@
 <template>
   <div class="max-w-7xl mx-auto flex flex-col relative">
-   
     <nav
       :class="[
         'max-w-7xl px-5 md:fixed top-0 z-[98] w-screen transition-all duration-300',
@@ -129,7 +128,6 @@
       </div>
       <div class="mt-6 text-center text-gray-500 text-xs">© {{ currentYear }} D3ff4ult. All rights reserved.</div>
     </footer>
-
   </div>
 </template>
 
@@ -220,18 +218,6 @@ p {
   color: #bcbcbc;
 }
 
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-  transition: color 0.3s;
-  font-size: 15px;
-}
-
 nav a.router-link-exact-active {
   display: inline-flex;
   flex-direction: column;
@@ -245,24 +231,11 @@ nav a.router-link-exact-active::after {
   margin-top: 0.08em;
   width: 100%;
   height: 4px;
-  margin-top: 0.08em;
   border-radius: 2px;
   background-color: #ff03038a;
 }
 
 nav a.router-link-exact-active:hover {
   color: hsl(0, 0%, 100%);
-}
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 </style>
