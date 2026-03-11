@@ -99,28 +99,28 @@ export default {
           title: "Getting Started with Deep Learning",
           issuer: "NVIDIA",
           date: "August 2025",
-          image: "/img/certificates/nvidia.png"
+          image: "/img/Certificates/NVIDIA.png"
         },
         {
           id: 2,
           title: "Programming using Python (120 Hours)",
           issuer: "NTI & ITIDA",
           date: "July 2025",
-          image: "/img/certificates/nti.png"
+          image: "/img/Certificates/NTI.png"
         },
         {
           id: 3,
           title: "CIB Summer Program - 'The Green Leap'",
           issuer: "CIB & IFC",
           date: "July 2025",
-          image: "/img/certificates/cib.png"
+          image: "/img/Certificates/CIB.png"
         },
         {
           id: 4,
           title: "Back-End Diploma (120 Hours)",
           issuer: "ARRAY Courses Center",
           date: "January 2025",
-          image: "/img/certificates/array.png"
+          image: "/img/Certificates/ARRAY.png"
         }
       ]
     };
