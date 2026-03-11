@@ -108,12 +108,12 @@
     <!-- SKILLS -->
     <section class="px-6 md:px-12 text-gray-200 mx-3">
 
-      <header>
-        <div class="text-[#38bdf8] text-2xl md:text-3xl font-bold mb-8 flex items-center">
-          Technical Toolkit
-          <div class="ml-4 h-[2px] w-20 md:w-32 bg-[#1e293b]"></div>
+    <header>
+       <div class="text-[#38bdf8] text-2xl md:text-3xl font-bold mb-8 flex items-center gap-4">
+        Technical Toolkit
+       <div class="flex-1 h-[2px] bg-[#1e293b]"></div>
         </div>
-      </header>
+    </header>
 
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
 
