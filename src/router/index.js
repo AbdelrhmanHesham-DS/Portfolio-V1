@@ -15,10 +15,10 @@ const routes = [
     meta: { title: 'About' }
   },
   {
-    path: '/portfolio',
-    name: 'portfolio',
-    component: () => import('../views/PortfolioView.vue'),
-    meta: { title: 'Portfolio' }
+    path: '/projects',
+    name: 'projects',
+    component: () => import('../views/ProjectsView.vue'),
+    meta: { title: 'Projects' }
   },
   {
     path: '/contact',
@@ -34,8 +34,8 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title ; 
-  next();
-});
+  document.title = to.meta.title
+  next()
+})
 
 export default router
