@@ -25,7 +25,7 @@
           <router-link to="/" class="nav-link">Home</router-link>
           <router-link to="/about" class="nav-link">About</router-link>
           <router-link to="/projects" class="nav-link">Projects</router-link>
-          <router-link to="/contact" class="nav-link">ContactMe</router-link>
+          <router-link to="/contact" class="nav-link">Contact</router-link>
         </div>
 
         <!-- Mobile Button -->
