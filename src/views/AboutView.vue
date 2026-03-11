@@ -19,8 +19,12 @@
           I specialize in <span class="text-[#38bdf8]">Data Science</span>, machine learning, and extracting insights from data using <strong>Python</strong>, statistics, and modern analytics tools.
         </p>
         <div class="mt-6">
-          <a href="/img/certificates/Abdelrhman_Hesham_CV.pdf" download class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition">
+          <a href="/img/cv/Abdelrhman_Hesham_CV.pdf" download class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition">
             Download CV
+          </a>
+          <div class="mt-6">
+          <a href="/img/Certificates" download class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition">
+            MyCertificates
           </a>
         </div>
       </div>
@@ -92,37 +96,6 @@ export default {
         { id: 3, name: "Pandas", image: "https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg", level: "Library" },
         { id: 4, name: "Scikit-Learn", image: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg", level: "ML Library" }
       ],
-
-      certificates: [
-        {
-          id: 1,
-          title: "Getting Started with Deep Learning",
-          issuer: "NVIDIA",
-          date: "August 2025",
-          image: "/img/Certificates/NVIDIA.png"
-        },
-        {
-          id: 2,
-          title: "Programming using Python (120 Hours)",
-          issuer: "NTI & ITIDA",
-          date: "July 2025",
-          image: "/img/Certificates/NTI.png"
-        },
-        {
-          id: 3,
-          title: "CIB Summer Program - 'The Green Leap'",
-          issuer: "CIB & IFC",
-          date: "July 2025",
-          image: "/img/Certificates/CIB.png"
-        },
-        {
-          id: 4,
-          title: "Back-End Diploma (120 Hours)",
-          issuer: "ARRAY Courses Center",
-          date: "January 2025",
-          image: "/img/Certificates/ARRAY.png"
-        }
-      ]
     };
   }
 };
