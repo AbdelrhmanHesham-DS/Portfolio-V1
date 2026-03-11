@@ -93,35 +93,35 @@ export default {
         { id: 4, name: "Scikit-Learn", image: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg", level: "ML Library" }
       ],
       certificates: [
-        {
-          id: 1,
-          title: "Getting Started with Deep Learning",
-          issuer: "NVIDIA",
-          date: "August 2025",
-          image: "/img/certificates/NVIDIA.png",
-        },
-        {
-          id: 2,
-          title: "Programming using Python (120 Hours)",
-          issuer: "NTI & ITIDA",
-          date: "July 2025",
-          image: "/img/certificates/NTI.png",
-        },
-        {
-          id: 3,
-          title: "CIB Summer Program - 'The Green Leap'",
-          issuer: "CIB & IFC",
-          date: "July 2025",
-          image: "/img/certificates/cib.png",
-        },
-        {
-          id: 4,
-          title: "Back-End Diploma (120 Hours)",
-          issuer: "ARRAY Courses Center",
-          date: "January 2025",
-          image: "/img/certificates/array.png",
-        }
-      ]
+  {
+    id: 1,
+    title: "Getting Started with Deep Learning",
+    issuer: "NVIDIA",
+    date: "August 2025",
+    image: "/img/certificates/nvidia.png",
+  },
+  {
+    id: 2,
+    title: "Programming using Python (120 Hours)",
+    issuer: "NTI & ITIDA",
+    date: "July 2025",
+    image: "/img/certificates/nti.png",
+  },
+  {
+    id: 3,
+    title: "CIB Summer Program - 'The Green Leap'",
+    issuer: "CIB & IFC",
+    date: "July 2025",
+    image: "/img/certificates/cib.png",
+  },
+  {
+    id: 4,
+    title: "Back-End Diploma (120 Hours)",
+    issuer: "ARRAY Courses Center",
+    date: "January 2025",
+    image: "/img/certificates/array.png",
+  }
+]
     };
   }
 };
