@@ -13,45 +13,54 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         
+        <!-- Contact Information Card -->
         <div class="bg-[#111827] p-8 rounded-2xl border border-[#1e293b] shadow-xl">
           <h3 class="text-xl font-semibold mb-8 text-[#38bdf8]">Contact Information</h3>
           
           <div class="space-y-8">
+
+            <!-- Email -->
             <div class="flex items-center gap-5 group">
               <div class="p-4 bg-[#1e293b] rounded-xl text-[#38bdf8] group-hover:bg-[#38bdf8] group-hover:text-white transition-all">
                 <Mail :size="24" />
               </div>
-              <div>
+              <div class="flex-1 min-w-0">
                 <h4 class="text-sm text-slate-500 font-medium uppercase tracking-wider">Email</h4>
-                <a href="mailto:abdelrhman.hesham2093@gmail.com" class="text-lg hover:text-[#38bdf8] transition-colors">
-                  abdelrhman.hesham2093@gmail.com
+                <a href="mailto:abdelrhman.hesham2093@gmail.com" 
+                   class="text-lg hover:text-[#38bdf8] transition-colors break-words">
+                   abdelrhman.hesham2093@gmail.com
                 </a>
               </div>
             </div>
 
+            <!-- Phone -->
             <div class="flex items-center gap-5 group">
               <div class="p-4 bg-[#1e293b] rounded-xl text-[#38bdf8] group-hover:bg-[#38bdf8] group-hover:text-white transition-all">
                 <Phone :size="24" />
               </div>
-              <div>
+              <div class="flex-1 min-w-0">
                 <h4 class="text-sm text-slate-500 font-medium uppercase tracking-wider">Phone</h4>
-                <a href="tel:+201066016826" class="text-lg hover:text-[#38bdf8] transition-colors">
-                  +20 106 601 6826
+                <a href="tel:+201066016826" 
+                   class="text-lg hover:text-[#38bdf8] transition-colors break-words">
+                   +20 106 601 6826
                 </a>
               </div>
             </div>
 
+            <!-- Location -->
             <div class="flex items-center gap-5 group">
               <div class="p-4 bg-[#1e293b] rounded-xl text-[#38bdf8] group-hover:bg-[#38bdf8] group-hover:text-white transition-all">
                 <MapPin :size="24" />
               </div>
-              <div>
+              <div class="flex-1 min-w-0">
                 <h4 class="text-sm text-slate-500 font-medium uppercase tracking-wider">Location</h4>
-                <p class="text-lg">Giza, Egypt</p>
+                <p class="text-lg break-words">Giza, Egypt</p>
               </div>
             </div>
+
           </div>
 
+          <!-- Social Links -->
           <div class="mt-12 pt-8 border-t border-[#1e293b]">
             <h3 class="text-sm font-semibold mb-6 text-slate-500 uppercase tracking-widest">Connect with me</h3>
             <div class="flex gap-4">
@@ -64,6 +73,7 @@
           </div>
         </div>
 
+        <!-- Contact Form Card -->
         <div class="bg-[#111827] p-8 rounded-2xl border border-[#1e293b] shadow-xl">
           <form @submit.prevent="handleSubmit" class="space-y-6">
             <div class="grid grid-cols-1 gap-6">
@@ -116,7 +126,7 @@ const router = useRouter()
 
 const socialLinks = [
   { label: 'LinkedIn', url: 'https://www.linkedin.com/in/abdelrhman-hesham-ds/', icon: 'fab fa-linkedin-in' },
-  { label: 'GitHub', url: 'https://github.com/AbdelrhmanHesham-DS', icon: 'fab fa-github' },
+  { label: 'GitHub', url: 'https://github.com/d3ff4ult', icon: 'fab fa-github' },
   { label: 'Instagram', url: 'https://www.instagram.com/abdo.h.28', icon: 'fab fa-instagram' },
   { label: 'Facebook', url: 'https://www.facebook.com/abdo.hesham.52438', icon: 'fab fa-facebook-f' }
 ]

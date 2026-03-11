@@ -10,7 +10,6 @@
           : 'backdrop-blur-md bg-[#0b0f1a]/90 border-b border-[#1e293b]'
       ]"
     >
-
       <div class="max-w-7xl mx-auto px-5 flex items-center justify-between py-4">
 
         <!-- Logo -->
@@ -33,19 +32,29 @@
           @click="toggleMobileMenu"
           class="md:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-slate-800 transition"
         >
-
           <!-- Close -->
-          <svg v-if="isMobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg
+            v-if="isMobileMenuOpen"
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M6 18L18 6M6 6l12 12"/>
           </svg>
 
           <!-- Menu -->
-          <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg
+            v-else
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
-
         </button>
 
       </div>
@@ -66,9 +75,7 @@
           <router-link to="/contact" @click="closeMobileMenu" class="mobile-nav-link">Contact</router-link>
         </div>
       </div>
-
     </nav>
-
 
     <!-- Overlay -->
     <div
@@ -77,19 +84,15 @@
       class="fixed inset-0 z-40 bg-black bg-opacity-50 md:hidden"
     ></div>
 
-
     <!-- MAIN CONTENT -->
-    <main class="flex-1 pt-[100px]">
-
+    <main class="flex-1 pt-20 md:pt-24">
       <div class="max-w-7xl mx-auto px-5">
         <router-view/>
       </div>
-
     </main>
 
-
     <!-- FOOTER -->
-    <footer class="bg-[#0b0f1a] border-t border-[#1e293b] text-gray-300 py-10 px-6">
+    <footer class="bg-[#0b0f1a] border-t border-[#1e293b] text-gray-300 py-12 px-6 mt-10">
 
       <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
 
@@ -109,7 +112,7 @@
             <li><router-link to="/" class="hover:text-white">Home</router-link></li>
             <li><router-link to="/about" class="hover:text-white">About</router-link></li>
             <li><router-link to="/projects" class="hover:text-white">Projects</router-link></li>
-            <li><router-link to="/contact"  class="hover:text-white">Contact</router-link></li>
+            <li><router-link to="/contact" class="hover:text-white">Contact</router-link></li>
           </ul>
         </div>
 
@@ -117,18 +120,24 @@
         <div>
           <h3 class="text-[#38bdf8] font-semibold mb-2">Contact Info</h3>
           <ul class="space-y-1">
-            <li>Email: <a href="mailto:abdelrhman.hesham2093@gmail.com">abdelrhman.hesham2093@gmail.com</a></li>
-            <li>Phone: <a href="tel:+201066016826">+20 106 601 6826</a></li>
+            <li>Email:
+              <a href="mailto:abdelrhman.hesham2093@gmail.com">
+                abdelrhman.hesham2093@gmail.com
+              </a>
+            </li>
+            <li>Phone:
+              <a href="tel:+201066016826">
+                +20 106 601 6826
+              </a>
+            </li>
             <li>Location: Giza, Egypt</li>
           </ul>
         </div>
 
       </div>
 
-
       <!-- Social -->
       <div class="flex justify-center gap-4 mt-8">
-
         <a
           v-for="social in socialLinks"
           :key="social.label"
@@ -138,9 +147,7 @@
         >
           <i :class="social.icon"></i>
         </a>
-
       </div>
-
 
       <!-- Copyright -->
       <div class="mt-6 text-center text-gray-500 text-xs">
@@ -151,7 +158,6 @@
 
   </div>
 </template>
-
 
 <script>
 export default {
@@ -173,7 +179,6 @@ export default {
     }
   },
 
-
   methods: {
 
     redirectToHome() {
@@ -194,11 +199,9 @@ export default {
 
   },
 
-
   mounted() {
     window.addEventListener("scroll", this.handleScroll)
   },
-
 
   beforeUnmount() {
     window.removeEventListener("scroll", this.handleScroll)
@@ -207,10 +210,13 @@ export default {
 }
 </script>
 
-
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   font-family:'Poppins',sans-serif;
@@ -218,7 +224,6 @@ body{
   color:#cbd5e1;
   margin:0;
 }
-
 
 /* Scrollbar */
 
@@ -234,7 +239,6 @@ body{
   background:#38bdf8;
   border-radius:10px;
 }
-
 
 /* Navigation */
 
