@@ -120,6 +120,26 @@ export default {
           github: 'https://github.com/d3ff4ult/Portfolio-V1.git',
           demo: 'https://portfolio-v1-cj9u.vercel.app/',
         },
+        {
+          id: 2,
+          name: 'Chatbot Project',
+          imageUrl: '/img/projects/cohere.jpg', // replace with your own image
+          status:
+            'A chatbot application that can answer questions and interact intelligently with users.',
+          d3ff4ult: 'Python, Vue.js, Tailwind CSS',
+          github: 'https://github.com/AbdelrhmanHesham-DS/Chatbot',
+          demo: 'null',
+        },
+        {
+          id: 3,
+          name: 'RAG Chatbot',
+          imageUrl: '/img/projects/rag.jpg', // replace with your own image
+          status:
+            'A Retrieval-Augmented Generation (RAG) chatbot that leverages documents for intelligent responses.',
+          d3ff4ult: 'Python, Vue.js, Tailwind CSS',
+          github: 'https://github.com/AbdelrhmanHesham-DS/Rag-chatbot',
+          demo: 'null',
+        },
       ],
     };
   },
