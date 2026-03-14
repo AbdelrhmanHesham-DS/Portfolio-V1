@@ -27,64 +27,60 @@
             <a
               href="/img/cv/Abdelrhman_Hesham_CV.pdf"
               download
-              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition flex items-center gap-2"
+              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
             >
-              <span>Download CV</span>
-              <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" class="w-5 h-5" />
+              Download CV
             </a>
             <button
               @click="openPreview('/img/cv/Abdelrhman_Hesham_CV.pdf')"
-              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition flex items-center gap-2"
+              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
             >
-              <span>Preview CV</span>
-              <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" class="w-5 h-5" />
+              Preview CV
             </button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CERTIFICATES SECTION -->
-    <section class="bg-[#0b0f1a] px-6 py-12 md:px-12 md:py-16 text-gray-200 mx-3 rounded-3xl border border-[#1e293b]">
-      <header class="mb-8">
-        <div class="text-[#38bdf8] text-2xl md:text-3xl font-bold flex items-center gap-4">
+    <!-- CERTIFICATES GRID -->
+    <section class="px-6 md:px-12 text-gray-200 mx-3">
+      <header>
+        <div class="text-[#38bdf8] text-2xl md:text-3xl font-bold mb-8 flex items-center gap-4">
           Certificates
           <div class="flex-1 h-[2px] bg-[#1e293b]"></div>
         </div>
       </header>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         <div
           v-for="cert in certificates"
           :key="cert.file"
-          class="bg-[#111827] rounded-2xl p-6 border border-[#1e293b] flex flex-col justify-between"
+          class="workflow-card flex flex-col justify-between p-6"
         >
           <div class="mb-4">
-            <h3 class="text-xl font-bold text-white mb-2">{{ cert.name }}</h3>
-            <p class="text-slate-400">{{ cert.issuer }} | {{ cert.date }}</p>
+            <h3 class="text-lg font-semibold text-white mb-1">{{ cert.name }}</h3>
+            <p class="text-slate-400 text-sm">{{ cert.issuer }} | {{ cert.date }}</p>
           </div>
-          <div class="flex gap-4 flex-wrap mt-4">
+          <div class="flex gap-2 mt-4">
             <a
-              :href="`/img/cer/${cert.file}`"
+              :href="`/img/certificates/${cert.file}`"
               download
-              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition flex items-center gap-2"
+              class="border border-[#38bdf8] text-[#38bdf8] px-3 py-2 rounded font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition text-sm text-center flex-1"
             >
-              <span>Download</span>
-              <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" class="w-5 h-5" />
+              Download
             </a>
             <button
-              @click="openPreview(`/img/cer/${cert.file}`)"
-              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition flex items-center gap-2"
+              @click="openPreview(`/img/certificates/${cert.file}`)"
+              class="border border-[#38bdf8] text-[#38bdf8] px-3 py-2 rounded font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition text-sm text-center flex-1"
             >
-              <span>Preview</span>
-              <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" class="w-5 h-5" />
+              Preview
             </button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- DATA SCIENCE WORKFLOW -->
+    <!-- DATA SCIENCE WORKFLOW GRID -->
     <section class="px-6 md:px-12 text-gray-200 mx-3">
       <header>
         <div class="text-[#38bdf8] text-2xl md:text-3xl font-bold mb-10 flex items-center">
@@ -92,31 +88,16 @@
           <div class="ml-4 h-[2px] w-24 md:w-40 bg-[#1e293b]"></div>
         </div>
       </header>
-      <div class="grid grid-cols-1 md:grid-cols-5 gap-6 text-center">
-        <div class="workflow-card">
-          <h3>Data Collection</h3>
-          <p>Gather datasets from APIs, databases, or scraping.</p>
-        </div>
-        <div class="workflow-card">
-          <h3>Data Cleaning</h3>
-          <p>Handle missing values and prepare datasets.</p>
-        </div>
-        <div class="workflow-card">
-          <h3>Data Analysis</h3>
-          <p>Explore trends and patterns.</p>
-        </div>
-        <div class="workflow-card">
-          <h3>Machine Learning</h3>
-          <p>Train predictive models.</p>
-        </div>
-        <div class="workflow-card">
-          <h3>Deployment</h3>
-          <p>Deploy models or dashboards.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 text-center">
+        <div v-for="step in workflow" :key="step.title" class="workflow-card p-6">
+          <h3 class="text-[#38bdf8] font-semibold text-lg mb-2">{{ step.title }}</h3>
+          <p class="text-slate-300 text-sm">{{ step.description }}</p>
         </div>
       </div>
     </section>
 
-    <!-- TECHNICAL TOOLKIT -->
+    <!-- TECHNICAL TOOLKIT GRID -->
     <section class="px-6 md:px-12 text-gray-200 mx-3">
       <header>
         <div class="text-[#38bdf8] text-2xl md:text-3xl font-bold mb-8 flex items-center gap-4">
@@ -124,26 +105,12 @@
           <div class="flex-1 h-[2px] bg-[#1e293b]"></div>
         </div>
       </header>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-        <div class="workflow-card flex flex-col items-center">
-          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="w-12 h-12 mb-3" />
-          <h3 class="text-[#38bdf8] font-semibold text-lg">Python</h3>
-          <p class="text-slate-300 text-sm mt-1">Advanced</p>
-        </div>
-        <div class="workflow-card flex flex-col items-center">
-          <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" class="w-12 h-12 mb-3" />
-          <h3 class="text-[#38bdf8] font-semibold text-lg">SQL</h3>
-          <p class="text-slate-300 text-sm mt-1">Intermediate</p>
-        </div>
-        <div class="workflow-card flex flex-col items-center">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" class="w-12 h-12 mb-3" />
-          <h3 class="text-[#38bdf8] font-semibold text-lg">Pandas</h3>
-          <p class="text-slate-300 text-sm mt-1">Data Analysis Library</p>
-        </div>
-        <div class="workflow-card flex flex-col items-center">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" class="w-12 h-12 mb-3" />
-          <h3 class="text-[#38bdf8] font-semibold text-lg">Scikit-Learn</h3>
-          <p class="text-slate-300 text-sm mt-1">Machine Learning Library</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div v-for="tool in toolkit" :key="tool.name" class="workflow-card flex flex-col items-center p-6">
+          <img :src="tool.icon" class="w-12 h-12 mb-3" />
+          <h3 class="text-[#38bdf8] font-semibold text-lg">{{ tool.name }}</h3>
+          <p class="text-slate-300 text-sm mt-1">{{ tool.level }}</p>
         </div>
       </div>
     </section>
@@ -174,7 +141,20 @@ export default {
         { name: "Programming using Python (120 Hours)", issuer: "NTI & ITIDA", date: "July 2025", file: "nti.pdf" },
         { name: "CIB Summer Program - The Green Leap", issuer: "CIB & IFC", date: "July 2025", file: "cib.pdf" },
         { name: "Back-End Diploma (120 Hours)", issuer: "ARRAY Courses Center", date: "January 2025", file: "array.pdf" },
-      ]
+      ],
+      workflow: [
+        { title: "Data Collection", description: "Gather datasets from APIs, databases, or scraping." },
+        { title: "Data Cleaning", description: "Handle missing values and prepare datasets." },
+        { title: "Data Analysis", description: "Explore trends and patterns." },
+        { title: "Machine Learning", description: "Train predictive models." },
+        { title: "Deployment", description: "Deploy models or dashboards." },
+      ],
+      toolkit: [
+        { name: "Python", icon: "https://cdn-icons-png.flaticon.com/512/5968/5968350.png", level: "Advanced" },
+        { name: "SQL", icon: "https://cdn-icons-png.flaticon.com/512/4248/4248443.png", level: "Intermediate" },
+        { name: "Pandas", icon: "https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg", level: "Data Analysis Library" },
+        { name: "Scikit-Learn", icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg", level: "Machine Learning Library" },
+      ],
     }
   },
   methods: {
