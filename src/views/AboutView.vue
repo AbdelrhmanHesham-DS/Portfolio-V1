@@ -1,5 +1,4 @@
 <template>
-
 <div class="space-y-16">
 
 <!-- ABOUT -->
@@ -21,17 +20,11 @@ About Me
 <div class="md:w-7/12 text-base md:text-lg text-slate-300">
 
 <p class="mb-5">
-Hi! I'm
-<strong class="text-white">Abdelrhman Hesham</strong>,
-a final-year Computer Science student at
-<strong class="text-white">Menoufia University</strong>.
+Hi! I'm <strong class="text-white">Abdelrhman Hesham</strong>, a final-year Computer Science student at <strong class="text-white">Menoufia University</strong>.
 </p>
 
 <p>
-I specialize in
-<span class="text-[#38bdf8]">Data Science</span>,
-machine learning, and extracting insights from data using
-<strong>Python</strong>.
+I specialize in <span class="text-[#38bdf8]">Data Science</span>, machine learning, and extracting insights from data using <strong>Python</strong>.
 </p>
 
 <div class="mt-6 flex gap-4 flex-wrap">
@@ -54,9 +47,7 @@ Preview CV
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
@@ -98,7 +89,6 @@ My Data Science Workflow
 </div>
 
 </div>
-
 </section>
 
 
@@ -114,11 +104,7 @@ Technical Toolkit
 
 <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
 
-<div
-v-for="skill in skills"
-:key="skill.id"
-class="workflow-card flex flex-col items-center"
->
+<div v-for="skill in skills" :key="skill.id" class="workflow-card flex flex-col items-center">
 
 <img :src="skill.image" class="w-12 h-12 mb-3"/>
 
@@ -133,7 +119,6 @@ class="workflow-card flex flex-col items-center"
 </div>
 
 </div>
-
 </section>
 
 
@@ -149,11 +134,7 @@ Certificates
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-<div
-v-for="cert in certificates"
-:key="cert.id"
-class="certificate-card"
->
+<div v-for="cert in certificates" :key="cert.id" class="certificate-card">
 
 <h3 class="text-lg font-bold text-white mb-2">
 {{ cert.title }}
@@ -185,7 +166,6 @@ Preview
 </div>
 
 </div>
-
 </section>
 
 
@@ -207,17 +187,14 @@ class="absolute top-4 right-6 text-white text-2xl"
 
 </div>
 
-
 </div>
-
 </template>
 
 
 <script>
 export default {
-
-data(){
-return{
+data() {
+return {
 
 previewFile:null,
 
@@ -254,31 +231,37 @@ id:1,
 title:"Getting Started with Deep Learning",
 issuer:"NVIDIA",
 date:"August 2025",
-pdf:"/certificates/nvidia.pdf"
+pdf:"/img/certificates/nvidia.pdf"
 },
 {
 id:2,
 title:"Programming using Python (120 Hours)",
 issuer:"NTI & ITIDA",
 date:"July 2025",
-pdf:"/certificates/nti.pdf"
+pdf:"/img/certificates/nti.pdf"
 },
 {
 id:3,
 title:"CIB Summer Program - The Green Leap",
 issuer:"CIB & IFC",
 date:"July 2025",
-pdf:"/certificates/cib.pdf"
+pdf:"/img/certificates/cib.pdf"
 },
 {
 id:4,
 title:"Back-End Diploma (120 Hours)",
 issuer:"ARRAY Courses Center",
 date:"January 2025",
-pdf:"/certificates/array.pdf"
+pdf:"/img/certificates/array.pdf"
 }
 ]
 
+}
+},
+
+methods:{
+openPreview(file){
+this.previewFile=file
 }
 }
 
