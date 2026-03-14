@@ -1,5 +1,6 @@
 <template>
   <div class="space-y-16">
+    <!-- ABOUT ME -->
     <section class="bg-[#0b0f1a] px-6 py-12 md:px-12 md:py-16 text-left text-gray-200 mx-3 rounded-3xl border border-[#1e293b]">
       <header>
         <div class="text-[#38bdf8] text-2xl md:text-3xl font-bold mb-8 flex items-center">
@@ -10,7 +11,7 @@
 
       <div class="flex flex-col md:flex-row gap-8 md:gap-12">
         <div class="flex justify-center md:justify-start">
-          <img src="/img/me.jpg" class="w-40 h-40 object-cover rounded-full border-4 border-[#38bdf8]"/>
+          <img src="/img/me.jpg" class="w-40 h-40 object-cover rounded-full border-4 border-[#38bdf8]" />
         </div>
 
         <div class="md:w-7/12 text-base md:text-lg text-slate-300">
@@ -40,6 +41,7 @@
       </div>
     </section>
 
+    <!-- DATA SCIENCE WORKFLOW -->
     <section class="px-6 md:px-12 text-gray-200 mx-3">
       <header>
         <div class="text-[#38bdf8] text-2xl md:text-3xl font-bold mb-10 flex items-center">
@@ -71,6 +73,7 @@
       </div>
     </section>
 
+    <!-- TECHNICAL TOOLKIT -->
     <section class="px-6 md:px-12 text-gray-200 mx-3">
       <header>
         <div class="text-[#38bdf8] text-2xl md:text-3xl font-bold mb-8 flex items-center gap-4">
@@ -79,14 +82,30 @@
         </div>
       </header>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-        <div v-for="skill in skills" :key="skill.id" class="workflow-card flex flex-col items-center">
-          <img :src="skill.image" class="w-12 h-12 mb-3"/>
-          <h3 class="text-[#38bdf8] font-semibold text-lg">{{ skill.name }}</h3>
-          <p class="text-slate-300 text-sm mt-1">{{ skill.level }}</p>
+        <div class="workflow-card flex flex-col items-center">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="w-12 h-12 mb-3" />
+          <h3 class="text-[#38bdf8] font-semibold text-lg">Python</h3>
+          <p class="text-slate-300 text-sm mt-1">Advanced</p>
+        </div>
+        <div class="workflow-card flex flex-col items-center">
+          <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" class="w-12 h-12 mb-3" />
+          <h3 class="text-[#38bdf8] font-semibold text-lg">SQL</h3>
+          <p class="text-slate-300 text-sm mt-1">Intermediate</p>
+        </div>
+        <div class="workflow-card flex flex-col items-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" class="w-12 h-12 mb-3" />
+          <h3 class="text-[#38bdf8] font-semibold text-lg">Pandas</h3>
+          <p class="text-slate-300 text-sm mt-1">Data Analysis Library</p>
+        </div>
+        <div class="workflow-card flex flex-col items-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" class="w-12 h-12 mb-3" />
+          <h3 class="text-[#38bdf8] font-semibold text-lg">Scikit-Learn</h3>
+          <p class="text-slate-300 text-sm mt-1">Machine Learning Library</p>
         </div>
       </div>
     </section>
 
+    <!-- CERTIFICATES MANUAL -->
     <section id="certificates" class="px-6 md:px-12 text-gray-200 mx-3 pb-10">
       <header>
         <div class="text-[#38bdf8] text-2xl md:text-3xl font-bold mb-10 flex items-center">
@@ -96,29 +115,105 @@
       </header>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div v-for="cert in certificates" :key="cert.id" class="certificate-card">
-          <h3 class="text-xl font-bold text-white mb-1">{{ cert.title }}</h3>
-          <p class="text-slate-400 text-sm mb-6">{{ cert.issuer }} | {{ cert.date }}</p>
+        <!-- Certificate 1 -->
+        <div class="certificate-card">
+          <h3 class="text-xl font-bold text-white mb-1">Getting Started with Deep Learning</h3>
+          <p class="text-slate-400 text-sm mb-6">NVIDIA | August 2025</p>
 
-          <div class="flex gap-4 flex-wrap">
+          <div class="mt-4">
             <a
-              :href="cert.pdf"
+              href="/img/certificates/nvidia.pdf"
               download
-              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition text-sm"
+              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition block text-center"
             >
-              Download
+              Download Certificate
             </a>
+          </div>
+          <div class="mt-4">
             <button
-              @click="openPreview(cert.pdf)"
-              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition text-sm"
+              @click="openPreview('/img/certificates/nvidia.pdf')"
+              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition w-full"
             >
-              Preview
+              Preview Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div class="certificate-card">
+          <h3 class="text-xl font-bold text-white mb-1">Programming using Python (120 Hours)</h3>
+          <p class="text-slate-400 text-sm mb-6">NTI & ITIDA | July 2025</p>
+
+          <div class="mt-4">
+            <a
+              href="/img/certificates/nti.pdf"
+              download
+              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition block text-center"
+            >
+              Download Certificate
+            </a>
+          </div>
+          <div class="mt-4">
+            <button
+              @click="openPreview('/img/certificates/nti.pdf')"
+              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition w-full"
+            >
+              Preview Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- Certificate 3 -->
+        <div class="certificate-card">
+          <h3 class="text-xl font-bold text-white mb-1">CIB Summer Program - The Green Leap</h3>
+          <p class="text-slate-400 text-sm mb-6">CIB & IFC | July 2025</p>
+
+          <div class="mt-4">
+            <a
+              href="/img/certificates/cib.pdf"
+              download
+              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition block text-center"
+            >
+              Download Certificate
+            </a>
+          </div>
+          <div class="mt-4">
+            <button
+              @click="openPreview('/img/certificates/cib.pdf')"
+              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition w-full"
+            >
+              Preview Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- Certificate 4 -->
+        <div class="certificate-card">
+          <h3 class="text-xl font-bold text-white mb-1">Back-End Diploma (120 Hours)</h3>
+          <p class="text-slate-400 text-sm mb-6">ARRAY Courses Center | January 2025</p>
+
+          <div class="mt-4">
+            <a
+              href="/img/certificates/array.pdf"
+              download
+              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition block text-center"
+            >
+              Download Certificate
+            </a>
+          </div>
+          <div class="mt-4">
+            <button
+              @click="openPreview('/img/certificates/array.pdf')"
+              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition w-full"
+            >
+              Preview Certificate
             </button>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- PREVIEW MODAL -->
     <div v-if="previewFile" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
       <div class="bg-[#0b0f1a] w-full max-w-5xl h-[90vh] rounded-xl border border-[#1e293b] relative overflow-hidden">
         <button
@@ -137,19 +232,7 @@
 export default {
   data() {
     return {
-      previewFile: null,
-      skills: [
-        { id: 1, name: "Python", image: "https://cdn-icons-png.flaticon.com/512/5968/5968350.png", level: "Advanced" },
-        { id: 2, name: "SQL", image: "https://cdn-icons-png.flaticon.com/512/4248/4248443.png", level: "Intermediate" },
-        { id: 3, name: "Pandas", image: "https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg", level: "Data Analysis Library" },
-        { id: 4, name: "Scikit-Learn", image: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg", level: "Machine Learning Library" }
-      ],
-      certificates: [
-        { id: 1, title: "Getting Started with Deep Learning", issuer: "NVIDIA", date: "August 2025", pdf: "/img/certificates/nvidia.pdf" },
-        { id: 2, title: "Programming using Python (120 Hours)", issuer: "NTI & ITIDA", date: "July 2025", pdf: "/img/certificates/nti.pdf" },
-        { id: 3, title: "CIB Summer Program - The Green Leap", issuer: "CIB & IFC", date: "July 2025", pdf: "/img/certificates/cib.pdf" },
-        { id: 4, title: "Back-End Diploma (120 Hours)", issuer: "ARRAY Courses Center", date: "January 2025", pdf: "/img/certificates/array.pdf" }
-      ]
+      previewFile: null
     }
   },
   methods: {
