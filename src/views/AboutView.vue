@@ -60,6 +60,48 @@ Preview CV
 </section>
 
 
+<!-- WORKFLOW -->
+<section class="px-6 md:px-12 text-gray-200 mx-3">
+
+<header>
+<div class="text-[#38bdf8] text-2xl md:text-3xl font-bold mb-10 flex items-center">
+My Data Science Workflow
+<div class="ml-4 h-[2px] w-24 md:w-40 bg-[#1e293b]"></div>
+</div>
+</header>
+
+<div class="grid grid-cols-1 md:grid-cols-5 gap-6 text-center">
+
+<div class="workflow-card">
+<h3>Data Collection</h3>
+<p>Gather datasets from APIs, databases, or scraping.</p>
+</div>
+
+<div class="workflow-card">
+<h3>Data Cleaning</h3>
+<p>Handle missing values and prepare datasets.</p>
+</div>
+
+<div class="workflow-card">
+<h3>Data Analysis</h3>
+<p>Explore trends and patterns.</p>
+</div>
+
+<div class="workflow-card">
+<h3>Machine Learning</h3>
+<p>Train predictive models.</p>
+</div>
+
+<div class="workflow-card">
+<h3>Deployment</h3>
+<p>Deploy models or dashboards.</p>
+</div>
+
+</div>
+
+</section>
+
+
 <!-- SKILLS -->
 <section class="px-6 md:px-12 text-gray-200 mx-3">
 
@@ -121,14 +163,7 @@ class="certificate-card"
 {{ cert.issuer }} ({{ cert.date }})
 </p>
 
-<div class="flex gap-3 flex-wrap">
-
-<button
-@click="openPreview(cert.pdf)"
-class="border border-[#38bdf8] text-[#38bdf8] px-4 py-2 rounded-lg font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
->
-Preview
-</button>
+<div class="flex gap-3">
 
 <a
 :href="cert.pdf"
@@ -137,6 +172,13 @@ class="border border-[#38bdf8] text-[#38bdf8] px-4 py-2 rounded-lg font-semibold
 >
 Download
 </a>
+
+<button
+@click="openPreview(cert.pdf)"
+class="border border-[#38bdf8] text-[#38bdf8] px-4 py-2 rounded-lg font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+>
+Preview
+</button>
 
 </div>
 
@@ -147,25 +189,19 @@ Download
 </section>
 
 
-<!-- PDF PREVIEW MODAL -->
-<div
-v-if="previewFile"
-class="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
->
+<!-- PREVIEW MODAL -->
+<div v-if="previewFile" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
 
 <div class="bg-[#0b0f1a] w-[90%] h-[90%] rounded-xl border border-[#1e293b] relative">
 
 <button
-@click="closePreview"
-class="absolute top-4 right-4 text-white text-xl"
+@click="previewFile=null"
+class="absolute top-4 right-6 text-white text-2xl"
 >
 ✕
 </button>
 
-<iframe
-:src="previewFile"
-class="w-full h-full rounded-xl"
-/>
+<iframe :src="previewFile" class="w-full h-full rounded-xl"></iframe>
 
 </div>
 
@@ -244,18 +280,6 @@ pdf:"/certificates/array.pdf"
 ]
 
 }
-},
-
-methods:{
-
-openPreview(file){
-this.previewFile=file
-},
-
-closePreview(){
-this.previewFile=null
-}
-
 }
 
 }
