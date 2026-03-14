@@ -56,12 +56,19 @@
         <h3 class="text-xl font-bold text-white mb-2">Getting Started with Deep Learning</h3>
         <p class="text-slate-400 mb-4">NVIDIA | August 2025</p>
         <div class="mt-6 flex gap-4 flex-wrap">
-          <a href="/img/certificates/nvidia.pdf" download class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition">
-            Download cert
-          </a>
-          <button @click="openPreview('/img/certificates/nvidia.pdf')" class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition">
-            Preview cert
-          </button>
+                      <a
+              href="/img/certificates/nvidia.pdf"
+              download
+              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+            >
+              Download cert
+            </a>
+            <button
+              @click="openPreview('/img/certificates/nvidia.pdf')"
+              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+            >
+              Preview cert
+            </button>
         </div>
       </div>
 
@@ -70,12 +77,19 @@
         <h3 class="text-xl font-bold text-white mb-2">Programming using Python (120 Hours)</h3>
         <p class="text-slate-400 mb-4">NTI & ITIDA | July 2025</p>
         <div class="mt-6 flex gap-4 flex-wrap">
-          <a href="/img/certificates/nti.pdf" download class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition">
-            Download cert
-          </a>
-          <button @click="openPreview('/img/certificates/nti.pdf')" class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition">
+            <a
+              href="/img/certificates/nti.pdf"
+              download
+              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+            >
+              Download cert
+            </a>
+            <button
+              @click="openPreview('/img/certificates/nti.pdf')"
+              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+            >
             Preview cert
-          </button>
+            </button>
         </div>
       </div>
 
@@ -84,12 +98,19 @@
         <h3 class="text-xl font-bold text-white mb-2">CIB Summer Program - The Green Leap</h3>
         <p class="text-slate-400 mb-4">CIB & IFC | July 2025</p>
         <div class="mt-6 flex gap-4 flex-wrap">
-          <a href="/img/certificates/cib.pdf" download class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition">
-            Download cert
-          </a>
-          <button @click="openPreview('/img/certificates/cib.pdf')" class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition">
+            <a
+              href="/img/certificates/cib.pdf"
+              download
+              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+            >
+              Download cert
+            </a>
+            <button
+              @click="openPreview('/img/certificates/cib.pdf')"
+              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+            >
             Preview cert
-          </button>
+            </button>
         </div>
       </div>
 
@@ -98,12 +119,19 @@
         <h3 class="text-xl font-bold text-white mb-2">Back-End Diploma (120 Hours)</h3>
         <p class="text-slate-400 mb-4">ARRAY Courses Center | January 2025</p>
         <div class="mt-6 flex gap-4 flex-wrap">
-          <a href="/img/certificates/array.pdf" download class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition">
-            Download cert
-          </a>
-          <button @click="openPreview('/img/certificates/array.pdf')" class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition">
+            <a
+              href="/img/certificates/array.pdf"
+              download
+              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+            >
+              Download cert
+            </a>
+            <button
+              @click="openPreview('/img/certificates/array.pdf')"
+              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+            >
             Preview cert
-          </button>
+            </button>
         </div>
       </div>
 
