@@ -106,112 +106,100 @@
     </section>
 
     <!-- CERTIFICATES MANUAL -->
-    <section id="certificates" class="px-6 md:px-12 text-gray-200 mx-3 pb-10">
-      <header>
-        <div class="text-[#38bdf8] text-2xl md:text-3xl font-bold mb-10 flex items-center">
-          Certificates
-          <div class="ml-4 h-[2px] w-20 md:w-32 bg-[#1e293b]"></div>
-        </div>
-      </header>
+    <section class="bg-[#0b0f1a] px-6 py-12 md:px-12 md:py-16 text-left text-gray-200 mx-3 rounded-3xl border border-[#1e293b]">
+  <header>
+    <div class="text-[#38bdf8] text-2xl md:text-3xl font-bold mb-8 flex items-center">
+      Certificates
+      <div class="ml-4 h-[2px] w-32 md:w-60 bg-[#1e293b]"></div>
+    </div>
+  </header>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Certificate 1 -->
-        <div class="certificate-card">
-          <h3 class="text-xl font-bold text-white mb-1">Getting Started with Deep Learning</h3>
-          <p class="text-slate-400 text-sm mb-6">NVIDIA | August 2025</p>
-
-          <div class="mt-4">
-            <a
-              href="/img/certificates/nvidia.pdf"
-              download
-              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition block text-center"
-            >
-              Download Certificate
-            </a>
-          </div>
-          <div class="mt-4">
-            <button
-              @click="openPreview('/img/certificates/nvidia.pdf')"
-              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition w-full"
-            >
-              Preview Certificate
-            </button>
-          </div>
-        </div>
-
-        <!-- Certificate 2 -->
-        <div class="certificate-card">
-          <h3 class="text-xl font-bold text-white mb-1">Programming using Python (120 Hours)</h3>
-          <p class="text-slate-400 text-sm mb-6">NTI & ITIDA | July 2025</p>
-
-          <div class="mt-4">
-            <a
-              href="/img/certificates/nti.pdf"
-              download
-              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition block text-center"
-            >
-              Download Certificate
-            </a>
-          </div>
-          <div class="mt-4">
-            <button
-              @click="openPreview('/img/certificates/nti.pdf')"
-              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition w-full"
-            >
-              Preview Certificate
-            </button>
-          </div>
-        </div>
-
-        <!-- Certificate 3 -->
-        <div class="certificate-card">
-          <h3 class="text-xl font-bold text-white mb-1">CIB Summer Program - The Green Leap</h3>
-          <p class="text-slate-400 text-sm mb-6">CIB & IFC | July 2025</p>
-
-          <div class="mt-4">
-            <a
-              href="/img/certificates/cib.pdf"
-              download
-              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition block text-center"
-            >
-              Download Certificate
-            </a>
-          </div>
-          <div class="mt-4">
-            <button
-              @click="openPreview('/img/certificates/cib.pdf')"
-              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition w-full"
-            >
-              Preview Certificate
-            </button>
-          </div>
-        </div>
-
-        <!-- Certificate 4 -->
-        <div class="certificate-card">
-          <h3 class="text-xl font-bold text-white mb-1">Back-End Diploma (120 Hours)</h3>
-          <p class="text-slate-400 text-sm mb-6">ARRAY Courses Center | January 2025</p>
-
-          <div class="mt-4">
-            <a
-              href="/img/certificates/array.pdf"
-              download
-              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition block text-center"
-            >
-              Download Certificate
-            </a>
-          </div>
-          <div class="mt-4">
-            <button
-              @click="openPreview('/img/certificates/array.pdf')"
-              class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition w-full"
-            >
-              Preview Certificate
-            </button>
-          </div>
-        </div>
+  <div class="flex flex-col md:flex-row gap-8 md:gap-12">
+    <!-- Certificate 1 -->
+    <div class="md:w-6/12 bg-[#111827] rounded-2xl p-6 border border-[#1e293b]">
+      <h3 class="text-xl font-bold text-white mb-2">Getting Started with Deep Learning</h3>
+      <p class="text-slate-400 mb-4">NVIDIA | August 2025</p>
+      <div class="flex gap-4 flex-wrap">
+        <a
+          href="/img/certificates/nvidia.pdf"
+          download
+          class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+        >
+          Download
+        </a>
+        <button
+          @click="openPreview('/img/certificates/nvidia.pdf')"
+          class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+        >
+          Preview
+        </button>
       </div>
-    </section>
+    </div>
+
+    <!-- Certificate 2 -->
+    <div class="md:w-6/12 bg-[#111827] rounded-2xl p-6 border border-[#1e293b]">
+      <h3 class="text-xl font-bold text-white mb-2">Programming using Python (120 Hours)</h3>
+      <p class="text-slate-400 mb-4">NTI & ITIDA | July 2025</p>
+      <div class="flex gap-4 flex-wrap">
+        <a
+          href="/img/certificates/nti.pdf"
+          download
+          class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+        >
+          Download
+        </a>
+        <button
+          @click="openPreview('/img/certificates/nti.pdf')"
+          class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+        >
+          Preview
+        </button>
+      </div>
+    </div>
+
+    <!-- Certificate 3 -->
+    <div class="md:w-6/12 bg-[#111827] rounded-2xl p-6 border border-[#1e293b]">
+      <h3 class="text-xl font-bold text-white mb-2">CIB Summer Program - The Green Leap</h3>
+      <p class="text-slate-400 mb-4">CIB & IFC | July 2025</p>
+      <div class="flex gap-4 flex-wrap">
+        <a
+          href="/img/certificates/cib.pdf"
+          download
+          class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+        >
+          Download
+        </a>
+        <button
+          @click="openPreview('/img/certificates/cib.pdf')"
+          class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+        >
+          Preview
+        </button>
+      </div>
+    </div>
+
+    <!-- Certificate 4 -->
+    <div class="md:w-6/12 bg-[#111827] rounded-2xl p-6 border border-[#1e293b]">
+      <h3 class="text-xl font-bold text-white mb-2">Back-End Diploma (120 Hours)</h3>
+      <p class="text-slate-400 mb-4">ARRAY Courses Center | January 2025</p>
+      <div class="flex gap-4 flex-wrap">
+        <a
+          href="/img/certificates/array.pdf"
+          download
+          class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+        >
+          Download
+        </a>
+        <button
+          @click="openPreview('/img/certificates/array.pdf')"
+          class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+        >
+          Preview
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- PREVIEW MODAL -->
     <div v-if="previewFile" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
