@@ -126,7 +126,7 @@ const router = useRouter()
 
 const socialLinks = [
   { label: 'LinkedIn', url: 'https://www.linkedin.com/in/abdelrhman-hesham-ds/', icon: 'fab fa-linkedin-in' },
-  { label: 'GitHub', url: 'https://github.com/d3ff4ult', icon: 'fab fa-github' },
+  { label: 'GitHub', url: 'https://github.com/AbdelrhmanHesham-DS/', icon: 'fab fa-github' },
   { label: 'Instagram', url: 'https://www.instagram.com/abdo.h.28', icon: 'fab fa-instagram' },
   { label: 'Facebook', url: 'https://www.facebook.com/abdo.hesham.52438', icon: 'fab fa-facebook-f' }
 ]
