@@ -22,6 +22,31 @@
             I specialize in <span class="text-[#38bdf8]">Data Science</span>, machine learning, and extracting insights from data using <strong>Python</strong>.
           </p>
 
+          <!-- Certificates UNDER About Me -->
+          <div class="mt-6">
+            <h3 class="text-xl text-white font-bold mb-3">Certificates</h3>
+
+            <div v-for="cert in certificates" :key="cert.id" class="mb-4">
+              <p class="text-slate-300 mb-2">{{ cert.title }} - {{ cert.issuer }} | {{ cert.date }}</p>
+              <div class="flex gap-4 flex-wrap">
+                <a
+                  :href="cert.pdf"
+                  download
+                  class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+                >
+                  Download cert
+                </a>
+                <button
+                  @click="openPreview(cert.pdf)"
+                  class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
+                >
+                  Preview cert
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CV Buttons -->
           <div class="mt-6 flex gap-4 flex-wrap">
             <a
               href="/img/cv/Abdelrhman_Hesham_CV.pdf"
@@ -105,102 +130,6 @@
       </div>
     </section>
 
-    <!-- CERTIFICATES MANUAL -->
-    <section class="bg-[#0b0f1a] px-6 py-12 md:px-12 md:py-16 text-left text-gray-200 mx-3 rounded-3xl border border-[#1e293b]">
-  <header>
-    <div class="text-[#38bdf8] text-2xl md:text-3xl font-bold mb-8 flex items-center">
-      Certificates
-      <div class="ml-4 h-[2px] w-32 md:w-60 bg-[#1e293b]"></div>
-    </div>
-  </header>
-
-  <div class="flex flex-col md:flex-row gap-8 md:gap-12">
-    <!-- Certificate 1 -->
-    <div class="md:w-6/12 bg-[#111827] rounded-2xl p-6 border border-[#1e293b]">
-      <h3 class="text-xl font-bold text-white mb-2">Getting Started with Deep Learning</h3>
-      <p class="text-slate-400 mb-4">NVIDIA | August 2025</p>
-      <div class="flex gap-4 flex-wrap">
-        <a
-          href="/img/certificates/nvidia.pdf"
-          download
-          class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
-        >
-          Download
-        </a>
-        <button
-          @click="openPreview('/img/certificates/nvidia.pdf')"
-          class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
-        >
-          Preview
-        </button>
-      </div>
-    </div>
-
-    <!-- Certificate 2 -->
-    <div class="md:w-6/12 bg-[#111827] rounded-2xl p-6 border border-[#1e293b]">
-      <h3 class="text-xl font-bold text-white mb-2">Programming using Python (120 Hours)</h3>
-      <p class="text-slate-400 mb-4">NTI & ITIDA | July 2025</p>
-      <div class="flex gap-4 flex-wrap">
-        <a
-          href="/img/certificates/nti.pdf"
-          download
-          class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
-        >
-          Download
-        </a>
-        <button
-          @click="openPreview('/img/certificates/nti.pdf')"
-          class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
-        >
-          Preview
-        </button>
-      </div>
-    </div>
-
-    <!-- Certificate 3 -->
-    <div class="md:w-6/12 bg-[#111827] rounded-2xl p-6 border border-[#1e293b]">
-      <h3 class="text-xl font-bold text-white mb-2">CIB Summer Program - The Green Leap</h3>
-      <p class="text-slate-400 mb-4">CIB & IFC | July 2025</p>
-      <div class="flex gap-4 flex-wrap">
-        <a
-          href="/img/certificates/cib.pdf"
-          download
-          class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
-        >
-          Download
-        </a>
-        <button
-          @click="openPreview('/img/certificates/cib.pdf')"
-          class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
-        >
-          Preview
-        </button>
-      </div>
-    </div>
-
-    <!-- Certificate 4 -->
-    <div class="md:w-6/12 bg-[#111827] rounded-2xl p-6 border border-[#1e293b]">
-      <h3 class="text-xl font-bold text-white mb-2">Back-End Diploma (120 Hours)</h3>
-      <p class="text-slate-400 mb-4">ARRAY Courses Center | January 2025</p>
-      <div class="flex gap-4 flex-wrap">
-        <a
-          href="/img/certificates/array.pdf"
-          download
-          class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
-        >
-          Download
-        </a>
-        <button
-          @click="openPreview('/img/certificates/array.pdf')"
-          class="border border-[#38bdf8] text-[#38bdf8] px-6 py-3 rounded-xl font-semibold hover:bg-[#38bdf8] hover:text-[#0b0f1a] transition"
-        >
-          Preview
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
     <!-- PREVIEW MODAL -->
     <div v-if="previewFile" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
       <div class="bg-[#0b0f1a] w-full max-w-5xl h-[90vh] rounded-xl border border-[#1e293b] relative overflow-hidden">
@@ -220,12 +149,18 @@
 export default {
   data() {
     return {
-      previewFile: null
+      previewFile: null,
+      certificates: [
+        { id: 1, title: "Getting Started with Deep Learning", issuer: "NVIDIA", date: "August 2025", pdf: "/img/certificates/nvidia.pdf" },
+        { id: 2, title: "Programming using Python (120 Hours)", issuer: "NTI & ITIDA", date: "July 2025", pdf: "/img/certificates/nti.pdf" },
+        { id: 3, title: "CIB Summer Program - The Green Leap", issuer: "CIB & IFC", date: "July 2025", pdf: "/img/certificates/cib.pdf" },
+        { id: 4, title: "Back-End Diploma (120 Hours)", issuer: "ARRAY Courses Center", date: "January 2025", pdf: "/img/certificates/array.pdf" }
+      ]
     }
   },
   methods: {
     openPreview(file) {
-      this.previewFile = file
+      this.previewFile = file;
     }
   }
 }
@@ -251,16 +186,5 @@ export default {
 .workflow-card p {
   color: #cbd5e1;
   font-size: 14px;
-}
-.certificate-card {
-  background: #111827;
-  border: 1px solid #1e293b;
-  border-radius: 16px;
-  padding: 26px;
-  transition: 0.3s;
-}
-.certificate-card:hover {
-  border-color: #38bdf8;
-  transform: translateY(-6px);
 }
 </style>
