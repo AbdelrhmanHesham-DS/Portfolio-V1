@@ -122,6 +122,15 @@ export default {
           github: 'https://github.com/AbdelrhmanHesham-DS/Rag-chatbot',
           demo: 'null',
         },
+        {
+          id: 4,
+          name: 'HealthAI Platform',
+          imageUrl: '/img/projects/healthai.jpg', // you can replace with your actual image
+          status: 'A full-stack AI-powered healthcare platform connecting patients with doctors, offering AI symptom checking, medical records, health tracking, and an intelligent chatbot.',
+          d3ff4ult: 'Angular, Node.js, MongoDB, Python (RAG AI)',
+          github: 'https://github.com/AbdelrhmanHesham-DS/HealthAI', 
+          demo: 'https://vercel.com/d3ff4ults-projects/health-ai', 
+        }
       ],
     };
   },
@@ -130,7 +139,6 @@ export default {
 
 <style scoped>
 .item-card {
-  /* Added backface-visibility to keep text sharp during scale transitions */
   backface-visibility: hidden;
 }
 
