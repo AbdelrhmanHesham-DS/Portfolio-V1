@@ -134,9 +134,11 @@ export default {
         {
           id: 5,
           name: 'Sales Data Analysis Dashboard',
-          imageUrl: '/img/projects/Sales Data Analysis Dashboard', // you can replace with your actual image
+          imageUrl: '/img/projects/Sales Data Analysis Dashboard.jpg', // you can replace with your actual image
           status: 'Developed an interactive Tableau dashboard to analyze sales trends and track key performance indicators (KPIs) across different regions and product categories. The dashboard provides actionable insights into revenue patterns, top-performing products, and seasonal fluctuations to support data-driven decision-making.',
-          d3ff4ult: 'Tableau,KPI Analysis,Data Visualization', 
+          d3ff4ult: 'Tableau,KPI Analysis,Data Visualization',
+          github: 'null', 
+          demo: 'null', 
         }
       ],
     };
